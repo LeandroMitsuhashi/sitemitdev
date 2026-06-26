@@ -144,8 +144,6 @@ section h2 {
     text-align: center;
 }
 
-
-
 #linguagens img {
     height: 150px;
     padding: 5px;
@@ -186,15 +184,65 @@ figure h2 {
     padding: 10px 0 20px 0;
 }
 
+
 .parte-contato {
-    margin: 30px;
-    padding-top: 20px;
+    
     align-items: center;
     justify-content: center;
+  
+}
+/*
+    margin: 30px;
+    padding-top: 20px;
     display: flex;
     flex-wrap: wrap;
-}
 
+*/
+.whatsapp-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    max-width: 220px;
+    margin: 0 auto;
+    padding: 20px;
+    background: transparent;
+    border-radius: 14px;
+    text-align: center;
+    font-family: system-ui, -apple-system, sans-serif;
+  }
+
+    .whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #25d366;
+    color: #0b0b0b;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 999px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+ 
+  .whatsapp-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.35);
+  }
+ 
+  .whatsapp-btn:focus-visible {
+    outline: 2px solid #25d366;
+    outline-offset: 3px;
+  }
+ 
+  .whatsapp-qr {
+    border-radius: 8px;
+    background: #fff;
+    padding: 6px;
+  }
+  
+/*
 .icones-contato {
     text-align: center;
     margin: 0 20px;
@@ -203,7 +251,75 @@ figure h2 {
 .icones-contato > img {
     height: 35px;
 }
+*/
 
+.email-copy {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 1rem;
+    color: #1a3a6b;
+    padding: 4px 2px;
+  }
+ 
+  .email-copy__text {
+    text-decoration: none;
+  }
+ 
+  .email-copy__hint {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.78rem;
+    color: #1a3a6b;
+    opacity: 0;
+    transform: translateX(-4px);
+    transition: opacity 0.15s ease, transform 0.15s ease;
+  }
+ 
+  .email-copy:hover .email-copy__hint,
+  .email-copy:focus-visible .email-copy__hint {
+    opacity: 0.8;
+    transform: translateX(0);
+  }
+ 
+  .email-copy:hover .email-copy__text,
+  .email-copy:focus-visible .email-copy__text {
+    text-decoration: underline;
+  }
+ 
+  .email-copy__toast {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    background: #1a3a6b;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    margin-bottom: 6px;
+  }
+ 
+  .email-copy__toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+ 
+  .email-copy:focus-visible {
+    outline: 2px solid #1a3a6b;
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
 
 /* rodapé */
 
